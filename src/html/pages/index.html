@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+	@@include('./../components/head.html', {'title': 'Weather App'})
+	<body>
+		<div class="wrapper">
+			@@include('./../components/header.html')
+			<main class="page">
+				<section class="page__card card">
+					<div class="card__container">
+						<div class="card__wrapper">
+							<div class="card__form">
+								<form class="card__search">
+									<input
+										class="card__input"
+										type="text"
+										spellcheck="false"
+										placeholder="введите город" />
+									<button type="button" class="card__button">
+										<img src="@img/search.png" alt="search-image" class="card__image" />
+									</button>
+								</form>
+							</div>
+							<div class="card__weather weather">
+								<img src="@img/rain.png" alt="img-weather" class="weather__icon" />
+								<h1 class="weather__temp"></h1>
+								<h2 class="weather__city">Погода</h2>
+								<div class="weather__details details">
+									<div class="details__column">
+										<img class="details__column_humidity-img" alt="" />
+										<div class="details__humidity">
+											<p class="humidity"></p>
+											<p class="details__text"></p>
+										</div>
+									</div>
+									<div class="details__column">
+										<img class="details__column_wind-img" alt="" />
+										<div class="details__wind">
+											<p class="wind"></p>
+											<p class="wind__text"></p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</main>
+			@@include('./../components/footer.html')
+			<script src="@js/index.js"></script>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,124 @@
+body {
+	background-color: #222;
+}
+
+.card {
+	&__wrapper {
+		max-width: rem(470);
+		background: linear-gradient(135deg, #2f97f2, #d731cc);
+		margin: rem(100) auto;
+		border-radius: rem(20);
+		overflow: hidden;
+		padding: rem(40) rem(35);
+		text-align: center;
+	}
+
+	&__search {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: rem(16);
+		@media (max-width: $mobileSmall) {
+			flex-direction: column;
+		}
+	}
+	&__input {
+		background: #ebfffc;
+		color: #555;
+		padding: rem(20) rem(25);
+		flex: 1 1 auto;
+		border-radius: rem(30);
+		font-size: rem(20);
+		@media (max-width: $mobileSmall) {
+			max-width: 100%;
+		}
+	}
+	&__input::placeholder {
+		font-size: rem(20);
+	}
+	&__button {
+		background: #ebfffc;
+		border-radius: 50%;
+		width: 60px;
+		height: 60px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		@media (max-width: $mobileSmall) {
+			width: 90%;
+			border-radius: rem(30);
+		}
+	}
+	&__image {
+		width: 16px;
+	}
+}
+
+.weather {
+	margin-top: rem(40);
+	@media (max-width: $mobileSmall) {
+		margin-top: rem(20);
+	}
+	&__icon {
+		max-width: rem(170);
+	}
+	&__temp {
+		font-size: rem(80);
+		font-weight: 500;
+		margin-top: rem(30);
+		@media (max-width: $mobileSmall) {
+			margin-top: rem(10);
+		}
+	}
+	&__city {
+		font-size: rem(48);
+		font-weight: 400;
+		margin-top: rem(10);
+	}
+}
+.details {
+	@media (max-width: $mobileSmall) {
+		margin-top: rem(40);
+	}
+	margin-top: rem(60);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	column-gap: rem(40);
+	padding: 0 rem(20);
+	@media (max-width: $mobileSmall) {
+		display: inline-block;
+	}
+	&__column {
+		display: flex;
+		align-items: center;
+		text-align: left;
+		gap: rem(15);
+	}
+	&__column:not(:last-child) {
+		@media (max-width: $mobileSmall) {
+			margin-bottom: rem(15);
+		}
+	}
+	&__column img {
+		width: rem(40);
+	}
+	&__humidity {
+		font-size: rem(24);
+	}
+	&__humidity p:last-child {
+		font-size: rem(20);
+	}
+
+	&__wind {
+		font-size: rem(24);
+	}
+	&__wind p:last-child {
+		font-size: rem(20);
+	}
+}
+
+.humidity,
+.wind {
+	font-size: rem(30);
+}
